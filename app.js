@@ -1,13 +1,10 @@
-// app.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const port = 3000; // Change this to your desired port
-
+const port = 3000; 
 app.use(bodyParser.json());
 
 const dataPath = path.join(__dirname, 'data.json');

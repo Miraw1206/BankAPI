@@ -12,7 +12,6 @@ const usersController = {
         const { id, cash = 0, credit = 0, isActive = true } = req.body;
         const newUser = new User(id, cash, credit, isActive);
         
-        // Check for duplicate users
         const existingUser = data.users.find((user) => user.id === newUser.id);
        
 
@@ -37,7 +36,6 @@ const usersController = {
         const { credit } = req.body;
         const user = data.users.find((u) => u.id === id);
 
-
         user.updateCredit(credit);
         updateData();
         res.send(user);
@@ -48,8 +46,6 @@ const usersController = {
         const { amount } = req.body;
         const user = data.users.find((u) => u.id === id);
 
-       
-
         const success = user.withdraw(amount);
 
         if (success) {
@@ -57,6 +53,7 @@ const usersController = {
             res.send(user);
         }
     },
+
 
     transfer: (req, res) => {
         const { id, receiverId } = req.params;
@@ -77,7 +74,6 @@ const usersController = {
     getUserDetails: (req, res) => {
         const { id } = req.params;
         const user = data.users.find((u) => u.id === id);
-
 
         res.send(user);
     },
