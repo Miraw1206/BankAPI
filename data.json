@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "cash": 0,
+      "credit": 0
+    },
+    {
+      "id": "uniqueUserId",
+      "cash": 100,
+      "credit": 50,
+      "isActive": true
+    },
+    {
+      "id": "newUserId",
+      "cash": 80,
+      "credit": 20,
+      "isActive": true
+    },
+    {
+      "id": "newUserId",
+      "cash": 50,
+      "credit": 20,
+      "isActive": true
+    }
+  ]
+}
